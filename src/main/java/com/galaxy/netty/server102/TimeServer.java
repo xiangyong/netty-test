@@ -47,7 +47,7 @@ public class TimeServer {
 				// TODO: handle exception
 			}
 		}
-		
+
 		new com.galaxy.netty.server102.TimeServer().bind(port);
 	}
 }

@@ -10,6 +10,7 @@ import java.util.Date;
 public class TimeServerHandler extends ChannelHandlerAdapter {
 	private int counter;
 
+	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 		ByteBuf buf = (ByteBuf) msg;
 		byte[] req = new byte[buf.readableBytes()];
@@ -23,6 +24,7 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
 		ctx.writeAndFlush(resp);
 	}
 
+	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
 		ctx.close();
 	}

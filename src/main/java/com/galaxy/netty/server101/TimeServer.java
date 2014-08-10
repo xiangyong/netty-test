@@ -47,7 +47,7 @@ public class TimeServer {
 				// TODO: handle exception
 			}
 		}
-		
+
 		new TimeServer().bind(port);
 	}
 }
